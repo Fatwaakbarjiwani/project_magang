@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import menu from "../assets/menu.svg";
 import beranda from "../assets/home.svg";
 import Campaign from "../assets/ticketstar.svg";
-import Ziswaf from "../assets/Heart.svg";
+import Ziswaf from "../assets/heart.svg";
 import {
   setShowLogin,
   setShowLogout,
