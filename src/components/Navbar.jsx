@@ -182,7 +182,7 @@ export default function Navbar({ url }) {
           <button className="text-start text-base font-bold text-green-600">
             <Link
               className="flex flex-col justify-center items-center"
-              to={"/detailZiswaf/detailZISWAF"}
+              // to={"/detailZiswaf/detailZISWAF"}
             >
               <img src={Ziswaf} alt="" />
               <p className="text-WHITE01 ">Ziswaf</p>
