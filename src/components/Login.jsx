@@ -5,8 +5,8 @@ import close from "../assets/keluar.svg";
 import LoginGoogle from "./LoginGoogle";
 import { useState } from "react";
 import { login } from "../redux/action/auth.Action";
- import { ToastContainer } from "react-toastify";
- import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Login() {
   const { showLogin } = useSelector((state) => state.modal);
@@ -34,11 +34,11 @@ export default function Login() {
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                 }}
-                className="flex justify-center p-10 rounded-3xl bg-white "
+                className="flex justify-center p-5 md:p-10 rounded-3xl bg-white "
               >
                 <div className="bg-white rounded-3xl p-5 font-Inter ">
                   <div className="flex justify-between items-center">
-                    <div className="flex justify-end  w-4/6">
+                    <div className="flex justify-end w-4/6">
                       <h1 className="text-2xl font-bold text-GREENDARK">
                         CARE <span className="text-green-600">US</span>
                       </h1>
@@ -50,7 +50,7 @@ export default function Login() {
                       <img src={close} className="w-6 h-6" alt="" />
                     </button>
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-2 md:gap-3">
                     <div className="flex flex-col ">
                       <label
                         htmlFor="name"
@@ -60,7 +60,7 @@ export default function Login() {
                       </label>
                       <input
                         type="text"
-                        className="rounded-xl ring-2 ring-gray-600 focus:outline-none w-full text-lg py-1 px-5"
+                        className="rounded-md md:rounded-xl ring-2 ring-gray-600 focus:outline-none w-full text-lg py-1 px-5"
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
                       />
@@ -74,7 +74,7 @@ export default function Login() {
                       </label>
                       <input
                         type="text"
-                        className="rounded-xl ring-2 ring-gray-600 focus:outline-none w-full text-lg py-1 px-5"
+                        className="rounded-md md:rounded-xl ring-2 ring-gray-600 focus:outline-none w-full text-lg py-1 px-5"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                       />
@@ -83,7 +83,7 @@ export default function Login() {
                   {/* button */}
                   <button
                     onClick={handleLogin}
-                    className="w-full bg-GREENDARK text-lg text-white mt-8 rounded-3xl px-5 py-2 hover:translate-y-[-5px] duration-300"
+                    className="w-full bg-GREENDARK text-lg text-white mt-8 rounded-md md:rounded-3xl px-5 py-1 md:py-2 hover:translate-y-[-5px] duration-300"
                   >
                     Masuk
                   </button>

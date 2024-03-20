@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <div
       style={{ backgroundImage: `url(${footer})` }}
-      className="flex justify-around md:justify-between lg:p-10 p-5 xl:p-20 bg-GREENDARK text-white font-Inter mt-10 mb-14 md:mb-0"
+      className="flex justify-around md:justify-between lg:p-10 p-5 xl:p-20 bg-GREENDARK text-white font-Inter mt-10 mb-[8vh] md:mb-0"
     >
       <div className="w-1/6 flex flex-col gap-1 sm:gap-2 xl:gap-5">
         <h1 className="font-bold sm:text-2xl  text-[10px] xl:text-3xl text-green-500">

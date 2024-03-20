@@ -41,10 +41,10 @@ function LoginGoogle() {
 
   return (
     <div
-      className="cursor-pointer w-full my-2 box-border flex justify-center hover:translate-y-[-5px] duration-300 border rounded-lg border-slate-5500"
+      className="cursor-pointer w-full md:my-2 box-border flex justify-center hover:translate-y-[-5px] duration-300 border rounded-lg border-slate-5500"
       onClick={() => loginWithGoogle()}
     >
-      <button className="font-bold p-1 flex gap-2 text-gray-600 items-center w-full bg-transparent text-lg justify-center ring-1 ring-black rounded-3xl mt-3">
+      <button className="font-bold p-1 flex gap-2 text-gray-600 items-center w-full bg-transparent text-lg justify-center ring-1 ring-black rounded-md md:rounded-3xl mt-3">
         <img src={google} alt="" /> Google
       </button>
     </div>

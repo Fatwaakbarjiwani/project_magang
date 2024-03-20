@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllCampaign } from "../redux/action/campaignAction";
+import { getAllCampaign, getAllCategory } from "../redux/action/campaignAction";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CardCarousel from "../components/CardCarousel";
@@ -20,6 +20,7 @@ export default function HomePage() {
   const [showCard, setShowCard] = useState(6);
   const dispatch = useDispatch();
   const { campaign } = useSelector((state) => state.campaign);
+  const { allCategory } = useSelector((state) => state.campaign);
 
   const lebihBanyak = () => {
     setShowCard(showCard + 6);
@@ -27,6 +28,7 @@ export default function HomePage() {
 
   useEffect(() => {
     dispatch(getAllCampaign());
+    dispatch(getAllCategory());
   }, [dispatch]);
 
   const responsive = {
@@ -149,7 +151,7 @@ export default function HomePage() {
             <Link to={"/detailDonasi/detailDonasi"}>Donasi Sekarang</Link>
           </button>
         </div>
-        <div className="w-2/6">
+        <div className="w-3/6 lg:w-2/6">
           <img src={content1} alt="" />
         </div>
       </div>
@@ -195,10 +197,16 @@ export default function HomePage() {
 
       {/* card */}
       <div>
-        <div className="flex ustify-between mx-4 md:mx-10 lg:mx-20 lg:text-3xl font-Inter font-bold">
+        <div className="flex justify-between items-end text-xl font-Inter sm:text-2xl font-bold my-2 sm:my-3 md:mx-10 lg:mx-20 mx-4">
           Program Aktif
+          <Link
+            to={`/detailDonasi/detailCampaign`}
+            className="text-xs text-green-500 sm:text-base"
+          >
+            Lihat semua
+          </Link>
         </div>
-        <div className="hidden mx-3 md:mx-10 lg:mx-20 justify-between sm:grid md:grid-cols-3 grid-cols-2 mb-12 md:gap-6 sm:gap-5 gap-3">
+        <div className="hidden md:mx-10 lg:mx-20 justify-between sm:grid md:grid-cols-3 grid-cols-2 mb-12 md:gap-6 sm:gap-5 gap-3">
           {campaign.slice(0, showCard).map((item) => (
             <Card key={item.campaignId} item={item} />
           ))}
@@ -245,6 +253,21 @@ export default function HomePage() {
             Program Lainnya
           </button>
         )}
+      </div>
+      {/* category */}
+      <div className="flex flex-col text-xl font-Inter sm:text-2xl font-bold my-2 sm:my-3 mx-4 md:mx-10 lg:mx-20">
+        <p>Category</p>
+        <div className="flex flex-wrap gap-x-3 gap-y-3 mt-2">
+          {allCategory.map((item) => (
+            <Link
+              to={`/detailDonasi/${item.categoryName}`}
+              key={item.id}
+              className="text-xs sm:text-base ring-1 ring-green-500 p-1 rounded-sm active:bg-green-500 active:text-white"
+            >
+              {item.categoryName}
+            </Link>
+          ))}
+        </div>
       </div>
       {/* content2 */}
       <div className="flex gap-2 justify-between lg:mx-10 mx-4 xl:mx-20 lg:items-center items-start font-Inter my-10">

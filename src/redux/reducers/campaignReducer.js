@@ -4,6 +4,9 @@ const initialState = {
   detailCampaign: [],
   categoryCampaign: [],
   searchCampaign: "",
+  getCampaignSearch: [],
+  getCategoryCampaign: [],
+  allCategory: [],
 };
 const authSlice = createSlice({
   name: "campaign",
@@ -21,10 +24,26 @@ const authSlice = createSlice({
     setSearchCampaign: (state, action) => {
       state.searchCampaign = action.payload;
     },
+    setGetCampaignSearch: (state, action) => {
+      state.getCampaignSearch = action.payload;
+    },
+    setGetCategoryCampaign: (state, action) => {
+      state.getCategoryCampaign = action.payload;
+    },
+    setAllCategory: (state, action) => {
+      state.allCategory = action.payload;
+    },
   },
 });
 
-export const { setCampaign, setDetailCampaign, setCategoryCampaign, setSearchCampaign } =
-  authSlice.actions;
+export const {
+  setCampaign,
+  setDetailCampaign,
+  setCategoryCampaign,
+  setSearchCampaign,
+  setGetCampaignSearch,
+  setGetCategoryCampaign,
+  setAllCategory,
+} = authSlice.actions;
 
 export default authSlice.reducer;

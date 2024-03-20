@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setShowModal } from "../redux/reducers/modalReducer";
 import modal from "../assets/modal.svg";
-import google from "../assets/google.svg";
 import close from "../assets/keluar.svg";
 import { useState } from "react";
 import { register } from "../redux/action/auth.Action";
+import LoginGoogle from "./LoginGoogle";
 // import { useNavigate } from "react-router-dom";
 
 export default function Modal() {
@@ -37,7 +37,7 @@ export default function Modal() {
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                 }}
-                className="flex justify-center p-10 rounded-3xl bg-white "
+                className="flex justify-center p-5 md:p-10 rounded-3xl bg-white "
               >
                 <div className="bg-white rounded-3xl p-5 font-Inter ">
                   <div className="flex justify-between items-center">
@@ -53,7 +53,7 @@ export default function Modal() {
                       <img src={close} className="w-6 h-6" alt="" />
                     </button>
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-2 md:gap-3">
                     <div className="flex flex-col ">
                       <label
                         htmlFor="name"
@@ -63,7 +63,7 @@ export default function Modal() {
                       </label>
                       <input
                         type="text"
-                        className="rounded-xl ring-2 ring-gray-600 focus:outline-none w-full text-lg py-1 px-5"
+                        className="rounded-md md:rounded-xl ring-2 ring-gray-600 focus:outline-none w-full text-lg py-1 px-5"
                         value={userName}
                         onChange={(e) => setUserName(e.target.value)}
                       />
@@ -77,7 +77,7 @@ export default function Modal() {
                       </label>
                       <input
                         type="text"
-                        className="rounded-xl ring-2 ring-gray-600 focus:outline-none w-full text-lg py-1 px-5"
+                        className="rounded-md md:rounded-xl ring-2 ring-gray-600 focus:outline-none w-full text-lg py-1 px-5"
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
                       />
@@ -91,7 +91,7 @@ export default function Modal() {
                       </label>
                       <input
                         type="text"
-                        className="rounded-xl ring-2 ring-gray-600 focus:outline-none w-full text-lg py-1 px-5"
+                        className="rounded-md md:rounded-xl ring-2 ring-gray-600 focus:outline-none w-full text-lg py-1 px-5"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                       />
@@ -105,7 +105,7 @@ export default function Modal() {
                       </label>
                       <input
                         type="text"
-                        className="rounded-xl ring-2 ring-gray-600 focus:outline-none w-full text-lg py-1 px-5"
+                        className="rounded-md md:rounded-xl ring-2 ring-gray-600 focus:outline-none w-full text-lg py-1 px-5"
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                       />
@@ -114,16 +114,14 @@ export default function Modal() {
                   {/* button */}
                   <button
                     onClick={handleRegister}
-                    className="w-full bg-GREENDARK text-lg text-white mt-8 rounded-3xl px-5 py-2 hover:scale-105"
+                    className="w-full bg-GREENDARK text-lg text-white mt-8 rounded-md md:rounded-3xl px-5 py-2 hover:scale-105"
                   >
                     Daftar
                   </button>
                   <div className="flex justify-center mt-3">
                     <p>atau masuk dengan</p>
                   </div>
-                  <button className="font-bold p-1 flex gap-2 text-gray-600 items-center w-full bg-transparent text-lg justify-center ring-1 ring-black rounded-3xl hover:scale-105 mt-3">
-                    <img src={google} alt="" /> Google
-                  </button>
+                  <LoginGoogle />
                 </div>
               </div>
             </div>

@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 import DetailZISWAF from "./pages/DetailZISWAF";
 import DetailDonasi from "./pages/DetailDonasi";
 import Berita from "./pages/Berita";
-import Modal from "./components/Modal";
+import Modal from "./components/modal";
 import Login from "./components/Login";
 import Rekening from "./pages/Rekening";
 import ModalNotif from "./components/ModalNotif";
@@ -12,12 +12,15 @@ import DetailCampaign from "./pages/DetailCampaign";
 import PembayaranDonasi from "./pages/PembayaranDonasi";
 import MetodePembayaran from "./pages/MetodePembayaran";
 import Navbar from "./components/Navbar";
+import Pencarian from "./pages/Pencarian";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar/>
+        <div className="mb-8">
+          <Navbar />
+        </div>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route
@@ -32,6 +35,7 @@ function App() {
             element={<DetailCampaign />}
           ></Route>
           <Route path="/pembayaran/:id" element={<PembayaranDonasi />}></Route>
+          <Route path="/pencarian/:pencarian" element={<Pencarian />}></Route>
           <Route
             path="/metodePembayaran/:id"
             element={<MetodePembayaran />}

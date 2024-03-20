@@ -27,7 +27,7 @@ export default function ModalNotif() {
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                 }}
-                className="flex justify-center p-10 rounded-3xl bg-white "
+                className="flex justify-center p-5 md:p-10 rounded-3xl bg-white "
               >
                 <div className="bg-white rounded-3xl p-5 font-Inter ">
                   <div className="flex justify-between items-center">
@@ -50,14 +50,14 @@ export default function ModalNotif() {
                   {/* button */}
                   <div className="flex justify-between gap-5">
                     <button
-                      className="w-full bg-GREENDARK text-lg text-white mt-8 rounded-3xl px-5 py-2 hover:scale-105"
+                      className="w-full bg-GREENDARK text-lg text-white mt-8 rounded-md md:rounded-3xl px-5 py-2 hover:scale-105"
                       onClick={onLogout}
                     >
                       Yes
                     </button>
                     <button
                       onClick={() => dispatch(setShowLogout(false))}
-                      className="w-full bg-transparent text-lg text-black ring-1 ring-black mt-8 rounded-3xl px-5 py-2 hover:scale-105"
+                      className="w-full bg-transparent text-lg text-black ring-1 ring-black mt-8 rounded-md md:rounded-3xl px-5 py-2 hover:scale-105"
                     >
                       No
                     </button>

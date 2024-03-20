@@ -58,7 +58,7 @@ export default function CardCarousel({ item, height, margin }) {
             <p>{item.endDate}</p>
           </div>
           <Link to={`/detailCampaign/${item.campaignCode}`}>
-            <button className="my-2 w-full rounded-sm lg:px-5 md:px-4 sm:px-3 px-2 xl:px-6 py-1 lg:py-2 bg-GREENDARK lg:text-base md:text-sm sm:text-xs text-[10px] text-white font-bold md:hover:scale-105 md:hover:bg-green-600">
+            <button className="active:bg-green-600 my-2 w-full rounded-sm lg:px-5 md:px-4 sm:px-3 px-2 xl:px-6 py-1 lg:py-2 bg-GREENDARK lg:text-base md:text-sm sm:text-xs text-[10px] text-white font-bold md:hover:scale-105 md:hover:bg-green-600">
               Ikut Donasi
             </button>
           </Link>
