@@ -89,9 +89,9 @@ export default function HomePage() {
                 alt=""
               />
               <p className="text-GREENDARK md:text-lg text-[10px] ms:text-sm lg:text-xl">
-                53.314.706
+                0
               </p>
-              <p className="font-bold md:text-lg sm:text-sm text-[10px] text-center lg:text-xl text-black font-Inter">
+              <p className="font-bold md:text-lg sm:text-sm text-[8px] text-center lg:text-xl text-black font-Inter">
                 Penerima Manfaat
               </p>
             </div>
@@ -102,9 +102,9 @@ export default function HomePage() {
                 alt=""
               />
               <p className="text-GREENDARK md:text-lg text-[10px] ms:text-sm lg:text-xl">
-                53.314.706
+                0
               </p>
-              <p className="font-bold md:text-lg sm:text-sm text-[10px] text-center lg:text-xl text-black font-Inter">
+              <p className="font-bold md:text-lg sm:text-sm text-[8px] text-center lg:text-xl text-black font-Inter">
                 Penghimpunan
               </p>
             </div>
@@ -115,9 +115,9 @@ export default function HomePage() {
                 alt=""
               />
               <p className="text-GREENDARK md:text-lg text-[10px] ms:text-sm lg:text-xl">
-                53.314.706
+                0
               </p>
-              <p className="font-bold md:text-lg sm:text-sm text-[10px] text-center lg:text-xl text-black font-Inter">
+              <p className="font-bold md:text-lg sm:text-sm text-[8px] text-center lg:text-xl text-black font-Inter">
                 Penyaluran
               </p>
             </div>
@@ -128,9 +128,9 @@ export default function HomePage() {
                 alt=""
               />
               <p className="text-GREENDARK md:text-lg text-[10px] ms:text-sm lg:text-xl">
-                53.314.706
+               0
               </p>
-              <p className="font-bold md:text-lg sm:text-sm text-[10px] text-center lg:text-xl text-black font-Inter">
+              <p className="font-bold md:text-lg sm:text-sm text-[8px] text-center lg:text-xl text-black font-Inter">
                 Donatur
               </p>
             </div>
