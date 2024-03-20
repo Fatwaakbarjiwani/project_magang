@@ -10,6 +10,9 @@ import {
 import { useParams } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import Footer from "../components/Footer";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Pencarian() {
   const { getCampaignSearch } = useSelector((state) => state.campaign);
@@ -23,22 +26,12 @@ export default function Pencarian() {
     }
   }, [pencarian, dispatch]);
 
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2, // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 2,
-      slidesToSlide: 2, // optional, default to 1.
-    },
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
   };
   return (
     <div>
@@ -68,26 +61,7 @@ export default function Pencarian() {
             <Card key={item.campaignId} item={item} />
           ))}
         </div>
-        <Carousel
-          className="sm:hidden drop-shadow-lg "
-          swipeable={true}
-          draggable={true}
-          // showDots={true}
-          responsive={responsive}
-          ssr={true}
-          infinite={true}
-          autoPlay={false} // Mengatur autoplay menjadi false untuk menghentikan geser otomatis
-          autoPlaySpeed={2000}
-          keyBoardControl={true}
-          customTransition="all .5"
-          transitionDuration={500}
-          containerClass="carousel-container"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          // deviceType={props.deviceType}
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
-          initialSlide={1}
-        >
+        <Slider {...settings}>
           {campaign.slice(0, 6).map((item) => (
             <div key={item.campaignId}>
               <CardCarousel
@@ -98,7 +72,7 @@ export default function Pencarian() {
               />
             </div>
           ))}
-        </Carousel>
+        </Slider>
       </div>
       <div>
         <Footer />

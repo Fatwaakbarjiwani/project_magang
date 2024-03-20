@@ -15,6 +15,9 @@ import { getAllCampaign, getAllCategory } from "../redux/action/campaignAction";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CardCarousel from "../components/CardCarousel";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function HomePage() {
   const [showCard, setShowCard] = useState(6);
@@ -31,23 +34,13 @@ export default function HomePage() {
     dispatch(getAllCategory());
   }, [dispatch]);
 
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2, // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 2,
-      slidesToSlide: 2, // optional, default to 1.
-    },
-  };
+   const settings = {
+     dots: true,
+     infinite: true,
+     speed: 500,
+     slidesToShow: 2,
+     slidesToScroll: 2,
+   };
   const responsive2 = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -128,7 +121,7 @@ export default function HomePage() {
                 alt=""
               />
               <p className="text-GREENDARK md:text-lg text-[10px] ms:text-sm lg:text-xl">
-               0
+                0
               </p>
               <p className="font-bold md:text-lg sm:text-sm text-[8px] text-center lg:text-xl text-black font-Inter">
                 Donatur
@@ -211,26 +204,7 @@ export default function HomePage() {
             <Card key={item.campaignId} item={item} />
           ))}
         </div>
-        <Carousel
-          className="sm:hidden drop-shadow-lg mx-2"
-          swipeable={true}
-          draggable={true}
-          // showDots={true}
-          responsive={responsive}
-          ssr={true}
-          infinite={true}
-          autoPlay={false} // Mengatur autoplay menjadi false untuk menghentikan geser otomatis
-          autoPlaySpeed={1000}
-          keyBoardControl={true}
-          customTransition="all .5"
-          transitionDuration={500}
-          containerClass="carousel-container"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          // deviceType={props.deviceType}
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
-          initialSlide={1}
-        >
+        <Slider {...settings}>
           {campaign.slice(0, showCard).map((item) => (
             <div key={item.campaignId}>
               <CardCarousel
@@ -241,7 +215,7 @@ export default function HomePage() {
               />
             </div>
           ))}
-        </Carousel>
+        </Slider>
       </div>
       {/* button2 */}
       <div className="hidden md:flex justify-center my-10">
