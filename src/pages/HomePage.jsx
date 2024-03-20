@@ -35,8 +35,8 @@ export default function HomePage() {
   }, [dispatch]);
 
    const settings = {
-     dots: true,
-     infinite: true,
+     dots: false,
+     infinite: false,
      speed: 500,
      slidesToShow: 2,
      slidesToScroll: 2,
