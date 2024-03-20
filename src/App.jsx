@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 import DetailZISWAF from "./pages/DetailZISWAF";
 import DetailDonasi from "./pages/DetailDonasi";
 import Berita from "./pages/Berita";
-import Modal from "./components/modal";
+import Modal from "./components/Modal";
 import Login from "./components/Login";
 import Rekening from "./pages/Rekening";
 import ModalNotif from "./components/ModalNotif";
