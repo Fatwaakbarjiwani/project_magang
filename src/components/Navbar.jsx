@@ -159,7 +159,7 @@ export default function Navbar({ url }) {
       {/* bawah */}
       <div className="fixed sm:hidden bottom-0 bg-white w-full py-2 px-3 items-center z-40 items-center rounded-lg">
         <div className="flex justify-between items-end ">
-          <button className="text-start text-base font-bold text-green-600">
+          <button className="text-start text-base font-bold ">
             <Link
               className="flex flex-col justify-center items-center"
               to={"/"}
@@ -169,7 +169,7 @@ export default function Navbar({ url }) {
             </Link>
           </button>
 
-          <button className="text-start text-base font-bold text-green-600">
+          <button className="text-start text-base font-bold ">
             <Link
               className="flex flex-col justify-center items-center"
               to={"/detailDonasi/detailDonasi"}
@@ -179,7 +179,7 @@ export default function Navbar({ url }) {
             </Link>
           </button>
 
-          <button className="text-start text-base font-bold text-green-600">
+          <button className="text-start text-base font-bold ">
             <Link
               className="flex flex-col justify-center items-center"
               // to={"/detailZiswaf/detailZISWAF"}
@@ -189,7 +189,7 @@ export default function Navbar({ url }) {
             </Link>
           </button>
 
-          <button className="text-start text-base font-bold text-green-600">
+          <button className="text-start text-base font-bold ">
             <Link
               className="flex flex-col justify-center items-center"
               to={"/"}
