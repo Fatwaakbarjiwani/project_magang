@@ -138,7 +138,7 @@ export default function HomePage() {
         </div>
       </div>
       {/* content1 */}
-      <div className="flex mt-[15vh] sm:mt-[30vh] justify-between mx-4 md:mx-10 lg:mx-20 items-start gap-5">
+      <div className="flex mt-[10vh] sm:mt-[30vh] justify-between mx-4 md:mx-10 lg:mx-20 items-start gap-5">
         <div className="font-Inter text-NEUTRAL04 sm:w-[80%] w-[60%]">
           <h1 className="sm:my-3 my- xl:my-5 sm:text-3xl text-lg md:text-4xl lg:text-5xl xl:text-6xl font-bold">
             Salurkan donasi kamu dengan mudah
