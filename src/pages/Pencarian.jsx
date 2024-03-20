@@ -61,7 +61,8 @@ export default function Pencarian() {
             <Card key={item.campaignId} item={item} />
           ))}
         </div>
-        <Slider {...settings}>
+      </div>
+        <Slider {...settings} className="sm:hidden drop-shadow-lg mx-2">
           {campaign.slice(0, 6).map((item) => (
             <div key={item.campaignId}>
               <CardCarousel
@@ -73,7 +74,6 @@ export default function Pencarian() {
             </div>
           ))}
         </Slider>
-      </div>
       <div>
         <Footer />
       </div>

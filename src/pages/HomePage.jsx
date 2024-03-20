@@ -204,7 +204,8 @@ export default function HomePage() {
             <Card key={item.campaignId} item={item} />
           ))}
         </div>
-        <Slider {...settings}>
+      </div>
+        <Slider {...settings} className="sm:hidden drop-shadow-lg mx-2">
           {campaign.slice(0, showCard).map((item) => (
             <div key={item.campaignId}>
               <CardCarousel
@@ -216,7 +217,6 @@ export default function HomePage() {
             </div>
           ))}
         </Slider>
-      </div>
       {/* button2 */}
       <div className="hidden md:flex justify-center my-10">
         {showCard <= 12 && (
