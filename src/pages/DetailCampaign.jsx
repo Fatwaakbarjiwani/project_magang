@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import location from "../assets/location.svg";
 import fb from "../assets/facebook.svg";
-import twit from "../assets/twitter.svg";
+import twit from "../assets/whatsapp.svg";
 import ig from "../assets/instagram.svg";
 // import Card from "../components/Card";
 import Footer from "../components/Footer";
@@ -41,6 +41,28 @@ export default function DetailCampaign() {
       dispatch(getAllCategory());
     }
   }, [id, dispatch]);
+
+  const shareToWhatsApp = (url) => {
+    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(
+      url
+    )}`;
+    window.open(whatsappUrl);
+  };
+
+  const shareToFacebook = (url) => {
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+      url
+    )}`;
+    window.open(facebookUrl);
+  };
+
+  const shareToInstagram = () => {
+    const instagramUrl = `https://www.instagram.com/username/?hl=id`;
+    window.open(instagramUrl);
+  };
+
+  const shareUrl = `/detailCampaign/${id}`;
+
   return (
     <div>
       {/* content */}
@@ -112,13 +134,22 @@ export default function DetailCampaign() {
                 Bagikan Campaign
               </p>
               <div className="flex gap-1">
-                <button className="bg-GREENDARK2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex justify-center items-center hover:scale-110">
+                <button
+                  onClick={() => shareToFacebook(shareUrl)}
+                  className="bg-GREENDARK2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex justify-center items-center hover:scale-110"
+                >
                   <img src={fb} alt="" />
                 </button>
-                <button className="bg-GREENDARK2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex justify-center items-center hover:scale-110">
+                <button
+                  onClick={() => shareToWhatsApp(shareUrl)}
+                  className="bg-GREENDARK2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex justify-center items-center hover:scale-110"
+                >
                   <img src={twit} alt="" />
                 </button>
-                <button className="bg-GREENDARK2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex justify-center items-center hover:scale-110">
+                <button
+                  onClick={() => shareToInstagram(shareUrl)}
+                  className="bg-GREENDARK2 rounded-full w-8 h-8 xl:w-10 xl:h-10 flex justify-center items-center hover:scale-110"
+                >
                   <img src={ig} alt="" />
                 </button>
               </div>
