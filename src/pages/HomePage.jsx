@@ -236,7 +236,7 @@ export default function HomePage() {
               <CardCarousel
                 key={item.campaignId}
                 item={item}
-                height={"h-60"}
+                height={"h-72"}
                 margin={"m-1"}
               />
             </div>
