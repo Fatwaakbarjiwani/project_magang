@@ -61,7 +61,7 @@ export default function DetailCampaign() {
     window.open(instagramUrl);
   };
 
-  const shareUrl = `/detailCampaign/${id}`;
+  const shareUrl = `https://project-magang-git-main-fatwaakbarjiwani.vercel.app/detailCampaign/${id}`;
 
   return (
     <div>
