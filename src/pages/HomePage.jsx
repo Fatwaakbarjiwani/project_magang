@@ -44,7 +44,7 @@ export default function HomePage() {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 2,
+      items: 3/2,
       slidesToSlide: 2, // optional, default to 1.
     },
   };

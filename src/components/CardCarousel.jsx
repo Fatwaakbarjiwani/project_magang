@@ -21,7 +21,7 @@ export default function CardCarousel({ item, height, margin }) {
           <img
             src={item.campaignImage}
             alt=""
-            className="rounded-t-md h-24 display-cover w-full"
+            className="rounded-t-md h-28 display-cover w-full"
           />
           <div className="mt-1 text-[7px] px-1 flex gap-1 items-center">
             <div>{item.creator}</div>
