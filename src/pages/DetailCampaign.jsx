@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import location from "../assets/location.svg";
 import fb from "../assets/facebook.svg";
-import twit from "../assets/whatsapp.svg";
+import twit from "../assets/twitter.svg";
 import ig from "../assets/instagram.svg";
 // import Card from "../components/Card";
 import Footer from "../components/Footer";
