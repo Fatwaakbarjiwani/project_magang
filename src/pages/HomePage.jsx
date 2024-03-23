@@ -44,7 +44,7 @@ export default function HomePage() {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 3/2,
+      items: 2,
       slidesToSlide: 2, // optional, default to 1.
     },
   };
@@ -236,7 +236,7 @@ export default function HomePage() {
               <CardCarousel
                 key={item.campaignId}
                 item={item}
-                height={"h-72"}
+                height={"h-60"}
                 margin={"m-1"}
               />
             </div>
