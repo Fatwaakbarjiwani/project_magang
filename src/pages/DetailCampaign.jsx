@@ -49,15 +49,15 @@ export default function DetailCampaign() {
     window.open(whatsappUrl);
   };
 
-  const shareToFacebook = (url) => {
-    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-      url
-    )}`;
-    window.open(facebookUrl);
-  };
+   const shareToFacebook = (url) => {
+     const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+       url
+     )}`;
+     window.open(facebookUrl, "_blank");
+   };
 
   const shareToInstagram = () => {
-    const instagramUrl = `https://www.instagram.com/username/?hl=id`;
+    const instagramUrl = `https://www.instagram.com/fatwaakbarjiwani/?hl=id`;
     window.open(instagramUrl);
   };
 
